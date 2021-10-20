@@ -3,6 +3,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from './views/Home.vue'
 import ImageCompress from './views/ImageCompress.vue'
 import NotFound from './views/NotFound.vue'
+import Vue3ref from './views/Vue3ref.vue'
 
 /** @type {import('vue-router').RouterOptions['routes']} */
 export const routes = [
@@ -15,6 +16,11 @@ export const routes = [
     path: '/image-compress',
     meta: { title: 'Image Compress' },
     component: ImageCompress,
+  },
+  {
+    path: '/vue3ref',
+    meta: { title: 'vue3 ref' },
+    component: Vue3ref,
   },
   {
     path: '/:path(.*)',
