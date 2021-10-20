@@ -7,9 +7,10 @@
         </h1>
         <nav>
           <ul class="ml-4 inline-flex space-x-2">
-            <template v-for="route in $router.options.routes">
+            <template v-for="(route, index) in $router.options.routes">
               <li
                 v-if="route.meta"
+                :key="index"
                 class="w-max bg-indigo-200 p-1 border-indigo-900 border-2 rounded-md"
               >
                 <router-link :to="route.path">{{ route.meta.title }}</router-link>
