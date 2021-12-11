@@ -1,12 +1,12 @@
 <template>
-  <main class="h-full flex flex-col container m-auto">
+  <main class="h-full w-screen flex flex-col container m-auto">
     <header class="bg-white shadow" v-if="$route.meta.title">
       <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 flex">
         <h1 class="text-3xl font-bold leading-tight text-gray-900">
           {{ $route.meta.title }}
         </h1>
-        <nav>
-          <ul class="ml-4 inline-flex space-x-2">
+        <nav class="flex-1">
+          <ul class="ml-4 inline-flex flex-wrap gap-2">
             <template v-for="(route, index) in $router.options.routes">
               <li
                 v-if="route.meta"
