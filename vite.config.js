@@ -8,6 +8,12 @@ export default defineConfig({
     vue(),
     Pages({
       dirs: 'src/views',
+      extendRoute(route, parent) {
+        return {
+          ...route,
+          meta: { title: route.name },
+        }
+      },
     }),
   ],
   resolve: {
