@@ -3,7 +3,8 @@ import vue from '@vitejs/plugin-vue'
 import path from 'path'
 import Pages from 'vite-plugin-pages'
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
+  base: command === 'build' ? '/Sutiation-Handle/' : './',
   plugins: [
     vue(),
     Pages({
@@ -24,4 +25,4 @@ export default defineConfig({
   server: {
     open: true,
   },
-})
+}))
